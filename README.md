@@ -1,4 +1,4 @@
-![header](https://capsule-render.vercel.app/api?type=shark&color=ffec90&height=230&section=header&text=what%20did%20you%20draw&fontSize=25)
+![header](https://capsule-render.vercel.app/api?type=soft&color=ffec90&height=150&section=header&text=what%20did%20you%20draw%3F%20🎨&fontSize=25&fontColor=4a4631&animation=twinkling)
 
 <h3>👩‍🎨 너,, 뭘 그렸니?</h3>
 
@@ -10,7 +10,10 @@
 </p>
 
 <p>
-	저 혼자 심심할 때 가지고 놀려고 만들었습니다. <br/>
+	저 혼자 심심할 때 가지고 놀려고 만들었습니다 👻<br/>
 </p>
-
-<p>아직 열심히 디벨롭 중...⏳</p>
+<br/>
+<div align="center">
+<img width="364" alt="image" src="https://user-images.githubusercontent.com/49464171/222673392-a73505f3-268d-45bf-9ae4-85a9444f8618.png">
+<p>마우스로 열심히 그렸는데 맞추질 못하니!<br/>아직 열심히 디벨롭 중...⏳</p>
+</div>
