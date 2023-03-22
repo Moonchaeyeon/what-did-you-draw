@@ -44,9 +44,13 @@ export default {
 		name: 'app',
 		file: 'public/build/bundle.js'
 	},
+	watch: {
+		chokidar: false
+	},
 	plugins: [
 		replace({
-			Foo: 'bar',
+			preventAssignment: true,
+			'process.browser': true,
 			// stringify the object       
 			process: JSON.stringify({
 				env: {

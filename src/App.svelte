@@ -1,20 +1,10 @@
 <script>
-	import Canvas from './Canvas.svelte'
-  import Guess from './Guess.svelte';
-	import Palette from './Palette.svelte'
-  import Success from './Success.svelte';
+	import { onMount } from 'svelte'
+	// import Canvas from './Canvas.svelte'
+  	import Canvas from './canvas/index.svelte';
+  	import Guess from './Guess.svelte';
+  	import Success from './Success.svelte';
 	import {CLASSES} from './utils/classes';
-
-	const colors = [
-		'#d58141',
-		'#d7c44c',
-		'#4fa9cc',
-		'#3f8d27',
-	]
-	const background = '#fff'
-
-	let color = colors[0]
-	const paletteColor = color
 
 	// word
 	let suggestedWord = '';
@@ -45,9 +35,10 @@
 		win = false;
 	}
 
-	$ : {
+	onMount(() => {
+		console.log("what..")
 		generateRandomWord();
-	}
+	})
 	$ : win = (suggestedWord === guessedWord);
 </script>
 
@@ -57,17 +48,7 @@
 	{:else}
 		<h1>{ suggestedWord }</h1>
 		<Canvas 
-			{color} 
-			{background} 
 			{guessImage}
-		/>
-		<Palette 
-			{paletteColor}
-			{colors}
-			{background}
-			on:color="{({ detail }) => {
-				color = detail.color
-			}}"
 		/>
 		<Guess 
 			{guessedWord}
