@@ -1,10 +1,10 @@
 <script>
 	import { onMount } from 'svelte'
-	// import Canvas from './Canvas.svelte'
-  	import Canvas from './canvas/index.svelte';
-  	import Guess from './Guess.svelte';
-  	import Success from './Success.svelte';
-	import {CLASSES} from './utils/classes';
+	import { CLASSES } from './utils/classes'
+  	import Canvas from './canvas/index.svelte'
+  	import Guess from './Guess.svelte'
+  	import Header from './header/Header.svelte'
+  	import Success from './Success.svelte'
 
 	// word
 	let suggestedWord = '';
@@ -21,7 +21,6 @@
 		// Load the model.
 		cocoSsd.load().then(model => {
 			model.detect(img).then(predictions => {
-			// console.log('Predictions: ', predictions);
 			if (predictions.length) {
 				console.log(predictions[0].class);
 				guessedWord = predictions[0].class;
@@ -36,12 +35,12 @@
 	}
 
 	onMount(() => {
-		console.log("what..")
 		generateRandomWord();
 	})
 	$ : win = (suggestedWord === guessedWord);
 </script>
 
+<Header />
 <main>
 	{#if win}
 		<Success retryGame={retryGame}/>
@@ -60,8 +59,10 @@
 	:global(body) {
 		margin: 0;
 		padding: 0;
+		width: 100vw;
 		min-height: 100vh;
 		display: flex;
+		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		background: #e5e5e5;

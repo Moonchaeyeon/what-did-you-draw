@@ -44,10 +44,4 @@
         border: none;
         border-radius: 10px;
     }
-
-    label {
-        width: 50px;
-        height: 50px;
-        border-radius: 5px;
-    }
 </style>

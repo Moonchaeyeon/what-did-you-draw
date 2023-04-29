@@ -43,8 +43,8 @@
 	on:touchstart={e => {
 		const { clientX, clientY } = e.touches[0]
 		handleStart({
-			offsetX: clientX - l,
-			offsetY: clientY - t
+			offsetX: clientX,
+			offsetY: clientY
 		})
 	}}	
 	on:mouseup={handleEnd}				
@@ -54,8 +54,8 @@
 	on:touchmove={e => {
 		const { clientX, clientY } = e.touches[0]
 		handleMove({
-			offsetX: clientX - l,
-			offsetY: clientY - t
+			offsetX: clientX,
+			offsetY: clientY
 		})
 	}}
 />
